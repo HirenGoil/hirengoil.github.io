@@ -1,38 +1,33 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+<footer class="page-footer teal">
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="col l6 s12">
+          <h5 class="white-text">{{ site.title }}</h5>
+          <p class="grey-text text-lighten-4">{{ site.description }}</p>
+        </div>
+        <div class="col l6 s12">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+              <img src="/images/profile.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s8">
+              <span class="white-text">
+                "Keep coding and keep living."
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by 
+          {% if site.github_username %}
+          <span>
+            {% include icon-github.html username=site.github_username %}
+          </span>
+          {% endif %}
+      </div>
+    </div>
+  </footer>
 
-  </div>
-
-</footer>

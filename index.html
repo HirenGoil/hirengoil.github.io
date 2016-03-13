@@ -1,23 +1,41 @@
 ---
 layout: default
 ---
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">{{ site.title }}</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">"Learning is not attained by chance, it must be sought for with ardor and diligence"</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/header1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="container">
+    <div class="section">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <!--   Icon Section   -->
+      <div class="row">
+        <h1 class="page-heading">Posts</h1>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        <ul class="post-list">
+          {% for post in site.posts %}
+            <li>
+              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+              <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </h2>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+     </div>
 
-</div>
+    </div>
+  </div>
