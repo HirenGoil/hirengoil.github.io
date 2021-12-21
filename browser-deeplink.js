@@ -200,11 +200,11 @@
             return;
         }
 
-        /*if (isAndroid() && !navigator.userAgent.match(/Firefox/)) {
+        if (isAndroid() && !navigator.userAgent.match(/Firefox/)) {
             var matches = uri.match(/([^:]+):\/\/(.+)$/i);
             uri = "intent://" + matches[2] + "#Intent;scheme=" + matches[1];
             uri += ";package=" + settings.android.appId + ";end";
-        }*/
+        }
 
         if (settings.fallback|| settings.fallbackToWeb) {
             timeout = setTimeout(openFallback(Date.now()), settings.delay);
