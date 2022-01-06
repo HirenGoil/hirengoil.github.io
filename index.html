@@ -19,6 +19,10 @@
         deeplink.open(uri);
         return false;
     }
+        
+        function openIntent(){
+            window.location.href=intent://app2app_secure_channel#Intent;scheme=csmobiletoken;package=com.cs.vasco;end";
+        }
 
     </script>
     <style>
@@ -37,10 +41,11 @@
         font-size: 20px;
     }
     </style>
+   
 </head>
 <body>
-    <a href="intent://app2app_secure_channel#Intent;scheme=csmobiletoken;package=com.cs.vasco;end">open intent</a>
-    <a href="csmobiletoken://app2app_secure_channel">open deeplink</a>
+    <a onclick="openIntent()"href="#">open intent</a>
+    <a href="csmobiletoken://">open deeplink</a>
     <a href="#" data-uri="csmobiletoken://app2app_secure_channel" onclick="clickHandler(this.dataset.uri)">open fb://profile</a>
 </body>
 </html>
