@@ -12,8 +12,7 @@
         },
         android: {
             appId: "com.cs.vasco"
-        },
-        fallback: false
+        }
     });
 
     function clickHandler(uri) {
@@ -40,6 +39,8 @@
     </style>
 </head>
 <body>
+    <a href="intent://app2app_secure_channel#Intent;scheme=csmobiletoken;package=com.cs.vasco;end">open intent</a>
+    <a href="csmobiletoken://app2app_secure_channel">open deeplink</a>
     <a href="#" data-uri="csmobiletoken://app2app_secure_channel" onclick="clickHandler(this.dataset.uri)">open fb://profile</a>
 </body>
 </html>
