@@ -4,25 +4,24 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <script src="browser-deeplink.js" type="text/javascript"></script>
     <script type="text/javascript">
-
-    deeplink.setup({
-        iOS: {
-            appId: "284882215",
-            appName: "facebook",
-        },
-        android: {
-            appId: "com.cs.vasco"
-        }
-    });
-
-    function clickHandler(uri) {
-        deeplink.open(uri);
-        return false;
+          
+    var isAndroid = function() {
+        return navigator.userAgent.match('Android');
     }
-        
-        function openIntent(){
-            window.location.href="intent://app2app_secure_channel#Intent;scheme=csmobiletoken;package=com.cs.vasco;end";
+
+    var isIOS = function() {
+        return navigator.userAgent.match('iPad') || 
+               navigator.userAgent.match('iPhone') || 
+               navigator.userAgent.match('iPod');
+    }
+    
+    function openIntent(){
+        if(isAndroid()){
+        window.location.href="intent://app2app_secure_channel#Intent;scheme=csmobiletoken;package=com.cs.vasco;end";
+        } else{
+            sindow.location.href = "csmobiletoken://app2app_secure_channel";
         }
+    }
 
     </script>
     <style>
@@ -46,6 +45,5 @@
 <body>
     <a onclick="openIntent()"href="#">open intent</a>
     <a href="csmobiletoken://">open deeplink</a>
-    <a href="#" data-uri="csmobiletoken://app2app_secure_channel" onclick="clickHandler(this.dataset.uri)">open fb://profile</a>
 </body>
 </html>
