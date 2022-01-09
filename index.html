@@ -18,7 +18,7 @@
     function openIntent(){
         var imageAsString = "00C15FDE10525073D60DA8120CF357FDA2EC6846E516A5EBA59D4A24D01945189CC15D6D817675C52234AB916C43CAAD3A64E168";
         if(isAndroid()){
-            window.location.href="intent://app2app_secure_channel?secure_message="+imageAsString+"&x-enable-copy=true#Intent;scheme=csmobiletoken2;Bpackage=com.cs.vasco;S.secure_message=imageAsString;B.x-enable-copy=true;end";
+            window.location.href="intent://app2app_secure_channel#Intent;scheme=csmobiletoken2;Bpackage=com.cs.vasco;S.secure_message=imageAsString;B.x-enable-copy=true;end";
         } else{
             window.location.href = "csmobiletoken2://app2app_secure_channel?secure_message="+imageAsString+"&x-enable-copy=true";
         }
